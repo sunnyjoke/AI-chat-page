@@ -3,6 +3,7 @@ from flask_mysqldb import MySQL
 from flask_wtf.csrf import CSRFProtect
 from flask_login import LoginManager, login_user, logout_user, login_required
 from voicechat import openai_handler
+from voicechat.openai_handler import generate_chatbot_response
 
 from config import config
 
@@ -11,6 +12,7 @@ from models.ModelUser import ModelUser
 
 # Entities:
 from models.entities.User import User
+
 
 app = Flask(__name__)
 
@@ -55,7 +57,6 @@ def logout():
 
 
 @app.route('/chat_page', methods=['GET', 'POST'])
-@login_required
 def home():
     if request.method == 'POST':
         datos = request.get_json()

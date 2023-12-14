@@ -1,7 +1,7 @@
 from config import load_configuration
 
-
 from openai import OpenAI
+
 import openai
 
 # Load OpenAI API key from a configuration method
