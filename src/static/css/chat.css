@@ -1,0 +1,123 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins',sans-serif;
+  color: white
+}
+
+body{
+  background-color: #8e8e8e;
+  display: flex;
+  flex-direction: row;
+  background-image: url(../img/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.control-panel{
+  height: 100vh;
+  width: 2in;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  place-content: space-between;
+  backdrop-filter: blur(15px);
+}
+
+.control-panel .panel-up{
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  place-content: space-between;
+
+}
+
+.control-panel h1{
+  margin-top: 20px;
+  border-bottom: 10px rgb(163, 163, 163);
+  color: rgb(245, 245, 245);
+}
+
+.control-panel .panel-donw{
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  place-content: end;
+}
+
+.panel-donw div{
+  margin-bottom: 30px;
+}
+
+.control-panel .panel-donw p{
+  color: rgb(163, 163, 163)
+}
+
+.control-panel .panel-donw a{
+  padding: 15px;
+  text-decoration: none;
+  padding: 15px;
+  margin-bottom: 20px;
+  color: rgb(163, 163, 163);
+}
+
+.control-panel a:hover{
+  text-shadow: rgb(210, 210, 210) 0px 0px 30px; 
+}
+
+.chat {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages{
+  height: 80%;
+  margin: 0.3in 0.5in 0 0.5in;
+  margin-top: 0.3in;
+  display:flex;
+  flex-direction: column;
+  overflow: auto;
+  position: relative;
+  overscroll-behavior-block: contain;
+  scrollbar-width: none;
+}
+
+.messages > div{
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.messages .ai-message{
+  margin-right: 2in;
+}
+
+.messages .user-message{
+  margin-left: 2in;
+  text-align: end;
+}
+
+.promt {
+  height: 20%;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promt input {
+  height: 40%;
+  width: 85%;
+  padding: 10px;
+  font-size: 1.1em;
+  white-space: pre-line;
+  background-color: rgb(49, 49, 49);
+  border: none;
+  outline: none;
+}

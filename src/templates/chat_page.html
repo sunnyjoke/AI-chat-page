@@ -1,0 +1,70 @@
+{% extends './base.html' %}
+
+{% block title %}Chat{% endblock %}
+
+{% block customCSS%}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+{% endblock %}
+
+
+{% block body %}
+
+<div class="control-panel">
+    <div class="panel-up">
+        <h1>Voice-AI</h1>
+        <img class="logo" src="{{ url_for('static', filename='img/chat-logo.png') }}" alt="" width="200">
+    </div>
+    <div class="panel-donw">
+        <div>
+            <p>{{current_user.fullname}}</p>
+        </div>
+        <div>
+            <a class="logout-btn" href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div>
+</div>
+
+<div class="chat">
+    <div class="messages">
+
+    </div>
+    <div class="promt">
+        <input type="text" id="user-input">
+        <button onclick="sendMessage()">enviar</button>
+    </div>
+</div>
+
+<script>
+
+    function sendMessage() {
+        // Get user message
+        let userInput = document.getElementById('user-input').value;
+
+        // Show user message in the chat
+        let chatContainer = document.getElementsByClassName('messages')[0];
+        chatContainer.insertAdjacentHTML('beforeend', `<div class="user-message">${userInput}</div>`);
+
+        // Send user message and get AI response
+        let aiResponse = getAIResponse(userInput);
+
+        // Show AI response in the chat
+        chatContainer.insertAdjacentHTML('beforeend', `<div class="ai-message">${aiResponse}</div>`);
+        }
+
+    function getAIResponse(texto) {
+
+      var xhr = new XMLHttpRequest();
+      console.log(`Primero ${xhr}`)
+      xhr.open('POST', '/chat_page', true);
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.send(JSON.stringify({texto: texto}));
+      console.log(`Revisión ${xhr}`)
+
+      xhr.onload = function() {
+        console.log(`llegó`)
+        return xhr.responseText;
+      };
+    }
+  </script>
+
+{% endblock %}
