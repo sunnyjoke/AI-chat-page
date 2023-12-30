@@ -19,6 +19,7 @@
 4. MYSQL_DB = 'chat-users' Hero goes the name of the data base
 
 ### Create a virtual environment by executing `virtualenv env` in the terminal. In case you don't have "virtualenv" installed, you can install it by executing `pip install virtualenv`.
+<br>
 ### Activate the virtual environment by executing `.\env\Scripts\activate`
 ### To finish the configuration, install all the libraries by executing `pip install -r requirements.txt` in the terminal.
 
