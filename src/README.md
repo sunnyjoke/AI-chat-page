@@ -4,7 +4,7 @@
 
 
 ### Before start using the app first create a data base with the name of your preference, a table that must have the name "user" and 4 columns as follows:
-#### 1. the first one must be called "id" and must be of type smallint(4)
+1. the first one must be called "id" and must be of type smallint(4)
 #### 1. the second one must be called "username" and must be of type varchar(20)
 #### 1. the third one must be called "password" and must be of type char(200)
 #### 1. the last one must be called "fullname" and must be of type varchar(50)
