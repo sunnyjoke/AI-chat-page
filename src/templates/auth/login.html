@@ -23,7 +23,11 @@
 
         {% endwith %}
         <h1>Please sign in</h1>
-        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+        {% if csrf_token %}
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        {% endif %}
+
         <div class="form-input">
             <ion-icon name="mail-outline"></ion-icon>
             <input type="text" class="form-control" id="username" name="username">
