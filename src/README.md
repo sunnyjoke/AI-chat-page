@@ -10,7 +10,7 @@
 4. the last one must be called "fullname" and must be of type varchar(50)
 
 > [!IMPORTANT]
-> Important: If you'r going to add an user the password must be hashed first, you can
+> Important: If you'r going to add a new user to the data base when you add the password must be hashed, to do this you can go to the config file and uncomment the print at the end, there you write your password, run the config file by executing `python .\src\test_project` and you should see in the terminal a lot of letters similar to this: `scrypt:32768:8:1$sR0hfAONwoKPFYii$89e4a4001c999f4870d789fcd4acfc7dfc1fed101cdb631d14a7b1b4c8d220b4ab8e6f943947979e17610938ad320375ded96190d70e5dfced396dcaf114a479` that must be the value for the column password.
 
 ### Go to the config file and replace the values of the following attributes in the DevelopmentConfig class:
 1. MYSQL_HOST = 'localhost' 
