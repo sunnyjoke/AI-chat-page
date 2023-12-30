@@ -3,7 +3,7 @@
 #### Description:
 
 
-### Before start using the app!
+### Configuration before start using the app!
 First create a data base with the name of your preference, a table that must have the name "user" and 4 columns as follows:
 1. the first one must be called "id" and must be of type smallint(4)
 2. the second one must be called "username" and must be of type varchar(20)
@@ -22,10 +22,12 @@ Go to the config file and replace the values of the following attributes in the 
 
 Create a virtual environment by executing `virtualenv env` in the terminal. In case you don't have "virtualenv" installed, you can install it by executing `pip install virtualenv`.
 
-Activate the virtual environment by executing `.\env\Scripts\activate`
+Activate the virtual environment by executing `.\env\Scripts\activate`.
+
 To finish the configuration, install all the libraries by executing `pip install -r requirements.txt` in the terminal.
 
-### Now the app is ready to run! just execute `python .\src\project.py` and in the browser search 127.0.0.1, you should be able to see the login page
+### Now the app is ready to run!
+Just execute `python .\src\project.py` and in the browser search 127.0.0.1, you should be able to see the login page
 
 ### To test the app just run the "test_app.py" file with pytest
 
