@@ -1,8 +1,7 @@
 import openai
 from dotenv import load_dotenv
 import os
-
-print("Config module executed")
+from werkzeug.security import generate_password_hash
 
 def load_configuration():
     """Load environment variables and set up API keys."""
@@ -30,3 +29,7 @@ class DevelopmentConfig(Config):
 config = {
     'development': DevelopmentConfig
 }
+
+"""
+print(generate_password_hash("write here you're password"))
+"""

@@ -1,0 +1,5 @@
+twilio
+openai
+Flask
+requests
+python-dotenv

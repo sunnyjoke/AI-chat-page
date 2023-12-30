@@ -80,7 +80,6 @@ body{
 .messages{
   height: 80%;
   margin: 0.3in 0.5in 0 0.5in;
-  margin-top: 0.3in;
   display:flex;
   flex-direction: column;
   overflow: auto;
@@ -90,8 +89,7 @@ body{
 }
 
 .messages > div{
-  padding: 10px;
-  margin-top: 20px;
+  display: flex;
 }
 
 .messages .ai-message{
@@ -101,23 +99,44 @@ body{
 .messages .user-message{
   margin-left: 2in;
   text-align: end;
+  display: flex;
+  justify-content: end;
+}
+
+.messages p{
+  padding: 10px;
+  margin-top: 20px;
+  background-color: rgb(49, 49, 49);
+  border-radius: 10px;
 }
 
 .promt {
   height: 20%;
-  margin-bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .promt input {
-  height: 40%;
+  height: 30%;
   width: 85%;
   padding: 10px;
   font-size: 1.1em;
   white-space: pre-line;
   background-color: rgb(49, 49, 49);
+  border-radius: 10px;
   border: none;
   outline: none;
+}
+
+.promt button{
+  padding: 5px;
+  background-color: rgb(109, 109, 109);
+  border-radius: 10px;
+  border: none;
+  position: absolute;
+  right: 120px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
