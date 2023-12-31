@@ -64,3 +64,5 @@ The file imports some libraries like flask, flask mysqldb, etc. which are used f
 
 
 #### config.py file
+
+- load_AI_configuration function: Load environment variables and set up API key for OpenAI 
