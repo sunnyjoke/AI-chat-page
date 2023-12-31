@@ -65,4 +65,14 @@ The file imports some libraries like flask, flask mysqldb, etc. which are used f
 
 #### config.py file
 
-- load_AI_configuration function: Load environment variables and set up API key for OpenAI 
+- load_AI_configuration function: Load environment variables and set up API key for OpenAI.
+
+- config class: Sets a secret key that will be used by the DevelopmentConfig class.
+
+- DevelopmentConfig class: Contains the data necessary to connect to the database.
+
+- config dictionary: It stores the database configuration for the development of the app, it could also store other configurations such as for testing.
+
+- TestConfig class: This class is used to disable CSRF tokens if necessary, such as for testing.
+
+- commented print: prints to the terminal the hashed password that the user entered in "generate_password_hash".
