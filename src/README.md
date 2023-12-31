@@ -76,3 +76,26 @@ The file imports some libraries like flask, flask mysqldb, etc. which are used f
 - TestConfig class: This class is used to disable CSRF tokens if necessary, such as for testing.
 
 - commented print: prints to the terminal the hashed password that the user entered in "generate_password_hash".
+
+
+#### test_project.py file
+
+Contains 5 different functions to ensure that all routes have a correct status code
+
+1. test_index: This test tries to access the default route to confirm that it is redirected to the /login route, the status code must be 302 because this is the status code that is obtained when doing a redirect
+
+2. test_login: This test tries to access the login route and confirms that the status code is 200, which indicates that everything has gone as expected and the page has loaded.
+
+3. test_logout: This test tries to access the logout route to confirm that it is redirected to the /login route, the status code must be 302 because this is the status code that is obtained when doing a redirect
+
+4. test_home: This test tries to access the chat_page route, since no user is logged in it should give us the 401 error
+
+5. test_status_404: This test tries to access a route that does not exist so it should get a 404 status code.
+
+
+#### AI folder > openai_handler.py file
+
+Here we first configure the openai key, then the generate_chatbot_response function is responsible for assigning a role to the AI, then it sends the user's message to the AI and finally returns the response it obtained.
+
+
+#### models folder > ModelUser.py file
