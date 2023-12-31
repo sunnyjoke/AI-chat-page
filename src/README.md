@@ -43,3 +43,12 @@ The file imports some libraries like flask, flask mysqldb, etc. which are used f
 
 1. route = /
    - This is the default route, with the function "index" the user is automatically redirected to the /login path
+
+2. route = /login
+   - This route accepts two methods, GET and POST, the login function validates if a POST type request was made, if not, it returns the rendering of the web page. If the condition is met, the information provided by the user is used to check if the user is in the database and if the password is correct, if the data is correct the user is redirected to the web page to chat with the AI, but if they are not correct the login page is reloaded along with an error message.
+
+3. route = /chat_page
+   - This route, like the login route, accepts the GET and POST methods, however, in order to access this page the user must be logged in, otherwise they will be redirected to the login page. If the user is logged in, the home function will evaluate what type of request is made, just as in the previous login function. If the request is POST, the information from the json file is saved to be able to send the text that the user wrote to the AI and after obtaining a response from it, return this information to the website
+
+4. route = /logout
+   - This route changes the user's status to not logged in, and redirects the user to the login page.
