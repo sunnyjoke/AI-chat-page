@@ -39,5 +39,7 @@ Is the main file of the project, it is responsible for managing the different ro
 
 The file imports some libraries like flask, flask mysqldb, etc. which are used for the rendering of the web page through python, the management of the database, csrf_tokens for greater security of the web, among others. Some project files such as config, openai handler, ModelUser, etc. are also imported, they're used to connect with the open AI API, load configuration data for the database and obtain data from the latter.
 
+**app.route(route)**
 
-
+1. route = /
+   - This is the default route, with the function "index" the user is automatically redirected to the /login path
