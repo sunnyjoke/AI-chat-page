@@ -99,3 +99,29 @@ Here we first configure the openai key, then the generate_chatbot_response funct
 
 
 #### models folder > ModelUser.py file
+
+It is responsible for obtaining the data of a user from the database, the data that will be obtained will be from the user that the person enters, that data will be formatted and returned by the function, in case there are no matches the function returns "None"
+
+
+#### models forder > entities folder > User.py file
+
+It is a class that is used to format and store the data obtained from a user.
+
+
+#### static folder > css folder > css files
+
+They are files created to style the login and chat_page web pages.
+
+
+#### templates folder > auth folder > login.html file
+
+It has a link for a custom CSS, it also has a structure in the body to highlight the login box, the box contains a form so that a username and a password can be entered, in case either of these two is incorrect, an error message is displayed on the fields to enter the data.
+
+
+#### templates folder > chat_page
+
+It is the page where you can chat with the AI, the body has a side panel that shows the name of the project, the name of the user who entered and a log out button. Most of the page will be occupied by the chat, there will be a space to display both the user's messages and the AI's responses, below there is an input where the user can write their message and send it.
+
+The send button calls the sendMessage function found at the end of the file, this function is responsible for obtaining the user's message from the input, then adds it to the html and finally calls the getAIResponse function to obtain a response from the AI ​​and add it to the html.
+
+getAIResponse is responsible for obtaining the csrf_token and, together with the user's message, making a POST request by sending a json file to be processed and return a response from the AI
